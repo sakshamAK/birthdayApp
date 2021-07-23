@@ -21,6 +21,7 @@ const Palindrome = () => {
         if(dateNum == revDate) {
             setSource("joy.svg");
             setMessage("Congrats! Your Birthdate is a palindrome");
+            setDateDifference("")
         } else {
             setSource("nextTime.svg");
             setMessage("Your Birthdate is not a palindrome");
@@ -32,10 +33,6 @@ const Palindrome = () => {
             let totalDaysInMonth = Math.abs(dateSplit[2] - Math.trunc(Math.trunc(revYear/100)));
             let totalDays = totalDaysInMonth + totalDaysByMonths;
             setDateDifference(`Awww! You are ${totalDays} days away from a palindrome birthday.`)
-
-
-            // console.log('Days By Months ' + totalDaysByMonths, '\n days in month ' + totalDaysInMonth, '\n total days ' + totalDays);
-            
         }
     }
     return (

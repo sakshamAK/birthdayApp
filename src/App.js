@@ -36,7 +36,7 @@ export default function App() {
           <div className="App">
             <div className="circle"></div>
             <div className="outer-box">
-              <div className = "btn-primary palin"><Link to = "/palindrome"><span>Palindrome Birthday</span></Link></div>
+              <div className = "btn-primary palin"><Link to = "/palindrome"><span>Click to visit Palindrome Birthday App</span></Link></div>
               <div className="content-box">
                 <h1>Is your birthday lucky?</h1>
                 <strong className="disclaimer">
