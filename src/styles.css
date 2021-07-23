@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  font-family: roboto;
+  margin: 0;
+  background: #ffedd5;
+  overflow: auto;
+}
+.circle {
+  height: 900px;
+  width: 1600px;
+  margin: -700px 0 0 0;
+  box-shadow: 0px 20px 150px #7c2d12;
+  border-radius: 30%;
+  background: #ea580c;
+}
+
+.outer-box {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 600px;
+  width: 1200px;
+  margin: -130px 0 0 200px;
+  box-shadow: 0px 20px 150px #7c2d12;
+  border-radius: 30px;
+  background: #fff7ed;
+  position:absolute;
+  overflow: hidden;
+}
+
+.content-box {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 40px 0 40px;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+::-webkit-datetime-edit-text {
+  padding: 0 0.3em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+img {
+  margin: 100px 100px 100px 0;
+  height: 350px;
+}
+
+input {
+  padding: 10px 40px;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px;
+}
+
+ol {
+  font-size: 19px;
+  font-family: 'Jost', sans-serif, 'futura Md Bt';  /* */
+  font-weight: 300;
+  text-align: justify;
+}
+
+h1 {
+  font-family: "product sans", 'Monorope', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  width: 40vw;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: "gotham HTF";
+  font-weight: 600;
+  text-align: center;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.cookies {
+  padding: 20px 0;
+  background: #ea580c;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+aside {
+  width: 200px;
+  margin: -70px 0 0 0;
+  font-weight: bold;  
+  font-size: 14px;
+}
+
+a {
+  color: black;
+}
+
+.disclaimer {
+  font-size: 16px;
+}
+
+.git,
+.twitter,
+.instagram,
+.linkedin {
+  height: 20px;
+  margin: 5px;
+}
+
+.btn-primary {
+  padding: 10px 40px;
+  margin: 10px 30px 0px;
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  color: rgb(234, 88, 12);
+  cursor: pointer;
+}
+
+.palin {
+  position: absolute;
+  margin: 0 0 0 70px;
+  border-radius: 0 0 30px 0;
+  top: 0px;
+  padding: 15px 30px 25px 0px;
+  left: -220px;
+  text-align: left;
+  background: #ff7934;
+  overflow: hidden;
+}
+
+.palin a {
+  text-decoration: none;
+  color: #fff7ed;
+}
+
+.palin:hover{
+  /* padding: 35px 30px; */
+  transition: all 0.5s;
+  left: -70px;
+  padding: 20px 30px 25px 30px;
+  /* font-size: 20px; */
+}
+.palin-text {
+  width: 500px;
+}
+
+input[type = "submit"] {
+  border-radius: 10px;
+  background: #3B82F6;
+  color: white;
+  border: none;
+}
+
+.set-message {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1360px) {
+  .circle {
+    height: 880px;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+  .outer-box {
+    height: 600px;
+    width: 90%;
+    margin: 80px 0 0 5%;
+  }
+  img {
+    margin: 150px 100px 100px 0;
+    height: 330px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  h1 {
+    width: 500px;
+  }
+  .circle {
+    height: 400px;
+    margin-top: -250px;
+    border-radius: 50%;
+  }
+  .outer-box {
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    flex-direction: column;
+  }
+  img {
+    height: 330px;
+    margin: 80px 0 0 0;
+  }
+  aside {
+    margin: 80px 0 30px 0;
+    text-align: left;
+    padding: 0 0 0 60px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  h1 {
+    font-size: 34px;
+  }
+  .disclaimer {
+    font-size: 15px;
+  }
+
+  ol {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  h1 {
+    margin-top: 50px;
+    width: 300px;
+  }
+  img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+ 
+  ol {
+    width: 90%;
+    margin-left: -30px;
+  }
+  #lucky-number,
+  .date-picker {
+    padding: 6px 30px;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+  }
+  #lucky-number {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  ol {
+    width: 90%;
+    margin-left: -10px;
+  }
+  img {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  ol {
+    width: 80%;
+  }
+  img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .palin-text {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .palin-text {
+    width: 300px;
+  }
+}
