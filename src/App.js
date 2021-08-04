@@ -65,16 +65,16 @@ export default function App() {
               <aside>
                 Created by <a href="https://sakshamak.netlify.app/">Saksham</a> <br />
                 <a href="https://www.instagram.com/sakshamak/?igshid=3fwihg3dq3y9">
-                  <img className="instagram" src="instagram.svg" />
+                  <img alt = "instagram" className="instagram" src="instagram.svg" />
                 </a>
                 <a href="https://www.linkedin.com/in/saksham-ak-55b9131b3/">
-                  <img className="linkedin" src="linkedin.svg" />
+                  <img alt = "linkedIn" className="linkedin" src="linkedin.svg" />
                 </a>
                 <a href="https://twitter.com/Saksham_ka">
-                  <img className="twitter" src="twitter.svg" />
+                  <img alt = "twitter" className="twitter" src="twitter.svg" />
                 </a>
                 <a href="https://github.com/sakshamAK">
-                  <img className="git" src="github.svg" />
+                  <img alt = "github" className="git" src="github.svg" />
                 </a>
               </aside>
             </div>
