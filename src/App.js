@@ -11,7 +11,6 @@ export default function App() {
 
   function toggleDisplay() {
     setDisplay("none");
-    console.log(showDisplay);
   }
 
   function resultAnnounce(event) {
