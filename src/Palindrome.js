@@ -9,35 +9,24 @@ const Palindrome = () => {
     const [source, setSource] = useState("joy.svg");
     document.body.style.background = "#F0F9FF";
 
-    const reverseStr = (str) => {
+    const reverseStr = str => {
         return str.split("").reverse().join("");
     };
 
-    const isPalindrome = (str) => {
+    const isPalindrome = str => {
         let reverse = reverseStr(str);
         return str === reverse;
     };
 
-    const convertDatetoStr = (date) => {
+    const convertDatetoStr = date => {
         var dateStr = { day: "", month: "", year: "" };
-
-        if (date.day < 10) {
-            dateStr.day = "0" + date.day;
-        } else {
-            dateStr.day = date.day.toString();
-        }
-
-        if (date.month < 10) {
-            dateStr.month = "0" + date.month;
-        } else {
-            dateStr.month = date.month.toString();
-        }
-
+        (date.day < 10) ? dateStr.day = "0" + date.day : dateStr.day = date.day.toString();
+        (date.month < 10) ? dateStr.month = "0" + date.month : dateStr.month = date.month.toString();
         dateStr.year = date.year.toString();
         return dateStr;
     };
 
-    const getAllDateFormats = (date) => {
+    const getAllDateFormats = date => {
         let dateStr = convertDatetoStr(date);
         let ddmmyyyy = dateStr.day + dateStr.month + dateStr.year;
         let mmddyyyy = dateStr.month + dateStr.day + dateStr.year;
@@ -48,7 +37,7 @@ const Palindrome = () => {
         return [ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyy, mmddyy, yymmdd]
     }
 
-    const checkPalindromeForAllFormats = (date) => {
+    const checkPalindromeForAllFormats = date => {
         let flag = false;
         let allFormats = getAllDateFormats(date)
         let dateFormat = "";
@@ -73,7 +62,7 @@ const Palindrome = () => {
         return flag;
     }
 
-    const isLeapYear = (year) => {
+    const isLeapYear = year => {
         if(year % 400 === 0) {
             return true 
         } 
@@ -86,7 +75,7 @@ const Palindrome = () => {
         return false
     }
 
-    const getNextDate = (date) => {
+    const getNextDate = date => {
         let day = date.day + 1;
         let month = date.month;
         let year = date.year;
@@ -123,7 +112,7 @@ const Palindrome = () => {
         }
     }
     
-    const getPrevDate = (date) => {
+    const getPrevDate = date => {
         let day = date.day - 1;
         let month = date.month;
         let year = date.year;
@@ -162,7 +151,7 @@ const Palindrome = () => {
         }
     }
 
-    let getNextPalindromeDate = (date) => {
+    let getNextPalindromeDate = date => {
         let nextDate = getNextDate(date);
         let prevDate = getPrevDate(date);
         let nextCtr = 0;
@@ -199,7 +188,7 @@ const Palindrome = () => {
         setPalindromeDate("");
         setTimeout(() => {
             let splitDate = yourDate.split("-");
-            if(splitDate != "") {
+            if(splitDate !== "") {
                 let date = {
                     day: Number(splitDate[2]),
                     month: Number(splitDate[1]),
@@ -245,11 +234,11 @@ const Palindrome = () => {
                         <li>Enter your birth date in first field.</li>
                         <li>Find out if your birthday is a Palindrome or not.</li>
                     </ol>
-                    <form onSubmit={(e) => resultAnnounce(e)}>
+                    <form onSubmit={e => resultAnnounce(e)}>
                         <input
                             type="date"
                             className="date-picker"
-                            onInput={(item) => setDate(item.target.value)}
+                            onInput={item => setDate(item.target.value)}
                         />
                         <input type="submit" value="Check" />
                     </form>

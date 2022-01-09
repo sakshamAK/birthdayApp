@@ -13,7 +13,7 @@ export default function App() {
     setDisplay("none");
   }
 
-  function resultAnnounce(event) {
+  const resultAnnounce = event => {
     let dateSplit = yourDate.split("-");
     let day = parseInt(dateSplit[1]);
     let month = parseInt(dateSplit[2]);
